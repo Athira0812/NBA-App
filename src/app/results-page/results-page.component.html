@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="card mt-5">
+    <div class="card-body">
+      <h5>{{ teamDetails.name }} [{{ teamDetails.abbreviation }}]</h5>
+      <h6 class="mb-2">{{ teamDetails.conference + 'ern' }} conference</h6>
+      <hr />
+      <p>Result of past 12 days:</p>
+      <div *ngFor="let info of matchScores">
+        <b>{{ info?.homeTeam }}</b>
+        {{ info?.homeTeamScore }} - {{ info?.visitorTeamScore}}
+        <b>{{ info?.visitorTeam }}</b>
+      </div>
+      <button type="button" class="btn btn-success mt-4" id="backBtn" routerLink="/home">
+        << Back to all team stats 
+      </button>
+    </div>
+  </div>
+</div>
